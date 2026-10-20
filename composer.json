@@ -1,0 +1,16 @@
+{
+    "name": "alfredo/php-ssr",
+    "description": "Practica PHP SSR",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "avozme",
+            "email": "avozme@yahoo.com"
+        }
+    ],
+    "require": {}
+}
