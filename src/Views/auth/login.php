@@ -11,6 +11,9 @@
         <?php if (isset($_GET['registered'])): ?>
             <p>Cuenta creada. Ya puedes iniciar sesión.</p>
         <?php endif; ?>
+        <?php if (($_GET['message'] ?? '') === 'auth_required'): ?>
+            <p role="alert">Debes iniciar sesión para crear una publicación.</p>
+        <?php endif; ?>
         <?php if ($this->error !== null): ?>
             <p role="alert"><?= htmlspecialchars($this->error, ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
