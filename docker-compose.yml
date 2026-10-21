@@ -5,10 +5,10 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./public:/var/www/html
-      - ./src:/var/www/src
-      - ./vendor:/var/www/vendor:ro
-      - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro
+      - ./public:/var/www/html:Z
+      - ./src:/var/www/src:Z
+      - ./vendor:/var/www/vendor:ro,Z
+      - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro,Z
     depends_on:
       - db
 
@@ -16,7 +16,7 @@ services:
     image: mysql:8.4
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: tablon_nuncios
+      MYSQL_DATABASE: practica
       MYSQL_USER: dev
       MYSQL_PASSWORD: dev
     volumes:

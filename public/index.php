@@ -1,5 +1,8 @@
 <?php
 
+echo "HOLA MUNDO";
+
+
 require dirname(__DIR__) . '/vendor/autoload.php';
 require dirname(__DIR__) . '/src/Core/Database.php';
 

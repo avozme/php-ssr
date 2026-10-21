@@ -1,4 +1,6 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
 
-# Instalar el controlador PDO para MySQL
-RUN docker-php-ext-install pdo_mysql
+RUN a2enmod rewrite
+
+COPY apache.conf /etc/apache2/conf-available/app.conf
+RUN a2enconf app
